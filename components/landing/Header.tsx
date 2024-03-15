@@ -31,7 +31,7 @@ const Header = () => {
     >
       <div className="container mx-auto h-20 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          <Link href="/">
+          {/* <Link href="/">
             <div className="text-gray-600 hover:text-gray-900">
               <img
                 src="https://i.ibb.co/7X3JrjG/chatecologot.png"
@@ -39,20 +39,36 @@ const Header = () => {
                 className="h-12 w-auto"
               />
             </div>
+          </Link> */}
+
+          <Link href="/">
+            <div className="text-gray-600 hover:text-gray-900">
+              <span className="text-2xl font-bold font-pacifico text-teal-600">
+                BotBakery
+              </span>
+            </div>
           </Link>
 
           <nav className="hidden lg:flex space-x-4">
             <Link href="/">
-              <div className="text-gray-600 hover:text-gray-900">Home</div>
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Home
+              </div>
             </Link>
             <Link href="/about">
-              <div className="text-gray-600 hover:text-gray-900">About</div>
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                About
+              </div>
             </Link>
             <Link href="/services">
-              <div className="text-gray-600 hover:text-gray-900">Services</div>
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Services
+              </div>
             </Link>
             <Link href="/contact">
-              <div className="text-gray-600 hover:text-gray-900">Contact</div>
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Contact
+              </div>
             </Link>
           </nav>
         </div>

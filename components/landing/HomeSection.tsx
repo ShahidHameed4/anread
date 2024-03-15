@@ -1,21 +1,22 @@
 import Link from "next/link";
 import Typed from "typed.js";
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const HomeSection = () => {
+  const [isFloating, setIsFloating] = useState(false);
+
   useEffect(() => {
     const textElement = document.getElementById("typewriter-text");
     if (textElement) {
       const typed = new Typed(textElement, {
         strings: [
-          "Start Creating Your Personalized Assistant",
-          "Empower Your Business with AI Chatbots",
-          "Enhance Customer Engagement with Chatbots",
+          "Create Your Personalized Assistant",
+          "Empower Your Business",
+          "Enhance Customer Engagement",
         ],
         typeSpeed: 50,
         loop: true,
-        showCursor:false
+        showCursor: false,
       });
       return () => {
         typed.destroy();
@@ -23,8 +24,16 @@ const HomeSection = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFloating((prevIsFloating) => !prevIsFloating);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="bg-white py-10 mt-20 lg:mt-20">
+    <section className="bg-white pt-10 pb-2 mt-10 lg:mt-10">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 lg:mr-8">
           <h1 className="text-4xl font-bold mb-8 font-pacifico" id="typewriter-text"></h1>
@@ -43,7 +52,7 @@ const HomeSection = () => {
             </div>
           </Link>
         </div>
-        <div className="lg:w-1/2 lg:ml-8">
+        <div className="lg:w-1/2 lg:ml-8" style={{ transform: isFloating ? "translateY(-10px)" : "translateY(10px)", transition: "transform 1s ease-in-out" }}>
           <img
             src="https://i.ibb.co/qYyV3n5/195.jpg"
             alt="Sample Image"
