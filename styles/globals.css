@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.font-custom {
+  font-family: 'Pacifico', cursive;
+  font-family: 'Readex Pro', sans-serif;
+}
+
+
+input:focus:not(input[type="submit"],input[type="button"]){
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+ input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+    width: 15px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+*{
+  font-family: 'poppins';
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #b7b3b3 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  border: 3px solid #D9D9D9;
+}
+
+/* Example Styles for React Tags*/
+.app {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Example Styles for React Tags*/
+
+.container {
+  margin: auto;
+  width: 50%;
+}
+.ReactTags__tags {
+  position: relative;
+}
+
+/* Styles for the input */
+.ReactTags__tagInput {
+  width: 200px;
+  border-radius: 2px;
+  margin-top: 12px;
+  display: inline-block;
+}
+.ReactTags__tagInput input.ReactTags__tagInputField,
+.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+  height: 31px;
+  margin: 0;
+  font-size: 12px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #eee;
+}
+
+/* Styles for selected tags */
+.ReactTags__selected span.ReactTags__tag {
+  border: 1px solid #ddd;
+  background: #63bcfd;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 2px;
+}
+.ReactTags__selected a.ReactTags__remove {
+  color: #aaa;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Styles for suggestions */
+.ReactTags__suggestions {
+  position: absolute;
+}
+.ReactTags__suggestions ul {
+  list-style-type: none;
+  box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
+  background: white;
+  width: 200px;
+}
+.ReactTags__suggestions li {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0;
+}
+.ReactTags__suggestions li mark {
+  text-decoration: underline;
+  background: none;
+  font-weight: 600;
+}
+.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+  background: #b7cfe0;
+  cursor: pointer;
+}
+
+.ReactTags__remove {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+  margin-left: 12px;
+}
+
+.rti--container {
+  min-width: 600px;
+  padding: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}
+
+.react-datepicker__navigation--years::before {
+  border-color: #666;
+  border-style: solid;
+  border-width: 3px 3px 0 0;
+  content: '';
+  display: block;
+  height: 9px;
+  left: 11px;
+  position: absolute;
+  width: 9px;
+}
+
+.react-datepicker__navigation--years-upcoming::before {
+  top: 17px;
+  transform: rotate(315deg);
+}
+
+.react-datepicker__navigation--years-previous::before {
+  top: 6px;
+  transform: rotate(135deg);
+}
+
+/* Stripe input elements CSS Start */
+
+.ElementsApp, .ElementsApp .InputElement {
+  font-size: 0.7rem !important;
+}
+
+/* Stripe input element CSS End */
+
+
+/* Appointment Event Calender CSS Start */
+
+.fc-prev-button, .fc-next-button {
+  color: #ffffff !important;
+  background-color: #AC55E2 !important;
+  border: none !important;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.fc-prev-button:hover, .fc-next-button:hover {
+  background-color: #B970E7 !important;
+  border: 0px;
+}
+
+.fc-toolbar {
+  background-color: #F6EEFF !important;
+  padding: 0.75rem;
+}
+
+.fc-toolbar-title {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+.fc-event-title {
+  font-size: 14px !important;
+}
+
+.fc-today-button {
+  color: #000000 !important;
+  background-color: #F6EEFF !important;
+  border: none !important;
+
+  font-weight: bold;
+}
+
+.fc-today-button:hover {
+  background-color: #F6EEFF !important;
+  font-weight: bold;
+}
+
+.fc-scroller {
+  overflow: hidden !important;
+}
+
+/* Appointment Event Calender CSS End */
+
+.auto-complete-dropdown .css-13cymwt-control  {
+  border-radius: 10px !important;
+  background: white !important;
+  box-shadow: 9.69822px 3.87929px 23.2757px rgba(94, 132, 194, 0.14) !important;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Fade in while sliding up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40) infinite;
+}
+
+
+
+
+
+
+
