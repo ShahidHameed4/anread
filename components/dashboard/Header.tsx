@@ -39,7 +39,7 @@ const DashboardHeader = () => {
             {/* Profile Menu */}
             {isProfileMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                <Link href="/profile">
+                <Link href="/dashboard/profile">
                   <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
                     Profile
                   </div>

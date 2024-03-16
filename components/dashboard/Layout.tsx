@@ -1,5 +1,3 @@
-// components/Layout.js
-
 import { useState } from 'react';
 import Header from './Header';
 import SideMenu from './SideMenu';
@@ -11,18 +9,20 @@ const Layout = ({ children }) => {
     setIsSideMenuOpen(!isSideMenuOpen);
   };
 
+  const sideMenuWidth = isSideMenuOpen ? '1/6' : '0'; // Adjusted width based on side menu state
+
   return (
-    <div className="flex">
+    <div className="flex relative"> {/* Make the container relative */}
       {/* Header and side menu content */}
       <div className="w-full">
         <Header />
-        <div className="flex">
+        <div className="flex relative"> {/* Make this container relative */}
           {/* Side menu on the left */}
-          <div className={`w-1/8 ${isSideMenuOpen ? '' : 'w-1/20'}`}>{/* Adjusted width when side menu is closed */}
+          <div className={`w-${sideMenuWidth} absolute top-0 left-0 overflow-hidden transition-width`}>
             <SideMenu isOpen={isSideMenuOpen} toggleSideMenu={toggleSideMenu} />
           </div>
-          {/* Page content on the right */}
-          <div className={`w-full ${isSideMenuOpen ? 'ml-48' : 'ml-12'}`}>{/* Adjusted ml-48 when side menu is open */}
+          {/* Page content */}
+          <div className={`w-full ${isSideMenuOpen ? 'ml-5' : ''}`}>{/* Adjusted ml-48 when side menu is open */}
             {children}
           </div>
         </div>
