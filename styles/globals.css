@@ -2,48 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400&display=swap");
 
-.font-custom {
-  font-family: 'Pacifico', cursive;
-  font-family: 'Readex Pro', sans-serif;
+@font-face {
+  font-family: "slick";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/slick.eot");
+  src: url("/fonts/slick.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/slick.woff") format("woff"),
+    url("/fonts/slick.ttf") format("truetype"),
+    url("/fonts/slick.svg#slick") format("svg");
 }
 
+.font-custom {
+  font-family: "Pacifico", cursive;
+  font-family: "Readex Pro", sans-serif;
+}
 
-input:focus:not(input[type="submit"],input[type="button"]){
-    border: none;
-    outline: none;
+input:focus:not(input[type="submit"], input[type="button"]) {
+  border: none;
+  outline: none;
 }
 
 input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
- input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-    width: 15px;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 10px;
+  display: none;
+  -webkit-appearance: none;
+  width: 15px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
-*{
-  font-family: 'poppins';
+* {
+  font-family: "poppins";
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Space Grotesk', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 * {
@@ -62,9 +78,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 10px;
-  border: 3px solid #D9D9D9;
+  border: 3px solid #d9d9d9;
 }
 
 /* Example Styles for React Tags*/
@@ -156,14 +172,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (prefers-color-scheme: dark) {
-  
 }
 
 .react-datepicker__navigation--years::before {
   border-color: #666;
   border-style: solid;
   border-width: 3px 3px 0 0;
-  content: '';
+  content: "";
   display: block;
   height: 9px;
   left: 11px;
@@ -183,30 +198,32 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Stripe input elements CSS Start */
 
-.ElementsApp, .ElementsApp .InputElement {
+.ElementsApp,
+.ElementsApp .InputElement {
   font-size: 0.7rem !important;
 }
 
 /* Stripe input element CSS End */
 
-
 /* Appointment Event Calender CSS Start */
 
-.fc-prev-button, .fc-next-button {
+.fc-prev-button,
+.fc-next-button {
   color: #ffffff !important;
-  background-color: #AC55E2 !important;
+  background-color: #ac55e2 !important;
   border: none !important;
   margin-left: 5px !important;
   margin-right: 5px !important;
 }
 
-.fc-prev-button:hover, .fc-next-button:hover {
-  background-color: #B970E7 !important;
+.fc-prev-button:hover,
+.fc-next-button:hover {
+  background-color: #b970e7 !important;
   border: 0px;
 }
 
 .fc-toolbar {
-  background-color: #F6EEFF !important;
+  background-color: #f6eeff !important;
   padding: 0.75rem;
 }
 
@@ -221,14 +238,14 @@ h1,h2,h3,h4,h5,h6 {
 
 .fc-today-button {
   color: #000000 !important;
-  background-color: #F6EEFF !important;
+  background-color: #f6eeff !important;
   border: none !important;
 
   font-weight: bold;
 }
 
 .fc-today-button:hover {
-  background-color: #F6EEFF !important;
+  background-color: #f6eeff !important;
   font-weight: bold;
 }
 
@@ -238,7 +255,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Appointment Event Calender CSS End */
 
-.auto-complete-dropdown .css-13cymwt-control  {
+.auto-complete-dropdown .css-13cymwt-control {
   border-radius: 10px !important;
   background: white !important;
   box-shadow: 9.69822px 3.87929px 23.2757px rgba(94, 132, 194, 0.14) !important;
@@ -272,10 +289,3 @@ h1,h2,h3,h4,h5,h6 {
   white-space: nowrap;
   animation: typewriter 3s steps(40) infinite;
 }
-
-
-
-
-
-
-
