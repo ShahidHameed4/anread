@@ -73,9 +73,6 @@ const IndexPage = () => (
       <VideoBackgroundSection />
       {/* <Plan />
       <FeaturesSection />
-
-      
-
       <FAQSection /> */}
       <WorkTogether />
 
