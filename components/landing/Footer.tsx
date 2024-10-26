@@ -4,6 +4,7 @@ import {
   faFacebook,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const Footer = () => (
   <footer className="bg-footer-color text-white py-6 mt-1">
@@ -11,13 +12,21 @@ const Footer = () => (
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="col-span-1 lg:col-span-2">
           <h2 className="text-xl lg:text-2xl font-bold mb-2 lg:mb-4 font-pacifico">
-            BotBakery
+            <Link href="/">
+              <div className="text-gray-600 hover:text-gray-900">
+                <img
+                  src="https://i.ibb.co/wzqgDPY/anread-logo-01.png"
+                  alt="Anread"
+                  className="h-14 w-auto"
+                />
+              </div>
+            </Link>
           </h2>
           <p className="text-sm">
-            BotBakery is an innovative platform for chatbot generation, provided
-            by Equinox Holdings, LLC. Our service is designed to empower real
-            estate agents and professionals to achieve exceptional success
-            through cutting-edge technology.
+            Anread is a professional consultancy firm focused on bridging the
+            gap between technology, policy, and business development. Our
+            expertise empowers organizations to navigate complex challenges and
+            achieve sustainable growth.
           </p>
           <div className="flex items-center mt-2 lg:mt-4 space-x-4">
             {/* Social Icons */}
@@ -33,35 +42,57 @@ const Footer = () => (
           </div>
         </div>
         <div className="col-span-1 lg:col-span-1">
-          <h2 className="text-xl lg:text-xl font-bold mb-2 lg:mb-4 font-pacifico">
-            Company
-          </h2>
+          <h2 className="text-xl lg:text-xl font-bold mb-2 lg:mb-4">Company</h2>
           <ul className="text-sm">
             <li>GDPR</li>
             <li>Limited Use Policy</li>
             <li>CCPA & CalOPPA</li>
-            {/* Add more legal links as needed */}
           </ul>
         </div>
         <div className="col-span-1 lg:col-span-1">
-          <h2 className="text-xl lg:text-xl font-bold mb-2 lg:mb-4 font-pacifico">
+          <h2 className="text-xl lg:text-xl font-bold mb-2 lg:mb-4">
             Services
           </h2>
           <ul className="text-sm">
-            <li>Consumer</li>
-            <li>For Professionals</li>
-            {/* Add more service links as needed */}
+            <li>
+              <Link href="/services/policy-consulting">
+                <div className="hover:underline cursor-pointer">
+                  Policy Consulting
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/tech-solutions">
+                <div className="hover:underline cursor-pointer">
+                  Technology Solutions
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/business-consulting">
+                <div className="hover:underline cursor-pointer">
+                  Business Consulting
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/development">
+                <div className="hover:underline cursor-pointer">
+                  Development Services
+                </div>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-    <div className="border-t border-teal-900 mt-6 pt-4 text-center">
+    <div className="border-t border-voodoo-900 mt-6 pt-4 text-center">
       <p className="text-xs">
-        123 Main Street, Suite 100, City, State, 12345 | contact@botbakery.com |
+        123 Main Street, Suite 100, City, State, 12345 | contact@Anread.com |
         (123) 456-7890
       </p>
       <p className="text-xs mt-2">
-        Made with ♥ in Virginia. Copyright BotBakery 2024. All rights reserved.
+        Made with ♥ in Virginia. Copyright Anread 2024. All rights reserved.
       </p>
     </div>
   </footer>

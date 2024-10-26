@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import ServicesDropdown from "./ServicesDropdown";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,83 +22,83 @@ const Header = () => {
     };
   }, []);
 
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleMouseEnter = () => {
+    setIsServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsServicesDropdownOpen(false);
+  };
+
   return (
     <div
-      className={`fixed top-0 w-full bg-gray-100 shadow-md px-6 z-50 ${
-        isScrolled ? "bg-opacity-75" : ""
+      className={`fixed top-0 w-full bg-gray-100 shadow-md px-6 z-50 transition duration-300 ease-in-out ${
+        isScrolled ? "bg-opacity-75 backdrop-blur-sm" : ""
       }`}
     >
       <div className="container mx-auto h-20 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          {/* <Link href="/">
+          <Link href="/">
             <div className="text-gray-600 hover:text-gray-900">
               <img
-                src="https://i.ibb.co/7X3JrjG/chatecologot.png"
-                alt="BotBakery"
+                src="https://i.ibb.co/ZSXGbzF/anread-logo11-01.png"
+                alt="Anread"
                 className="h-12 w-auto"
               />
             </div>
-          </Link> */}
-
-          <Link href="/">
-            <div className="text-gray-600 hover:text-gray-900">
-              <span className="text-2xl font-bold font-pacifico text-teal-600">
-                BotBakery
-              </span>
-            </div>
           </Link>
-
-          <nav className="hidden lg:flex space-x-4">
-            <Link href="/">
-              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
-                Home
-              </div>
-            </Link>
-            <Link href="/about">
-              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
-                About
-              </div>
-            </Link>
-            <Link href="/services">
-              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
-                Services
-              </div>
-            </Link>
-            <Link href="/contact">
-              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
-                Contact
-              </div>
-            </Link>
-          </nav>
         </div>
         <div className="flex items-center gap-6">
-          {/* Mobile menu toggle button */}
           <button
             className="lg:hidden text-gray-600 hover:text-gray-900"
             onClick={toggleMobileMenu}
           >
             <FontAwesomeIcon icon={faBars} />
           </button>
-          {/* Dropdown menu */}
+          {/* Dropdown menu for mobile */}
           {isMobileMenuOpen && (
             <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md py-2 rounded-md">
-              <Link href="/">
+              <Link href="/careers">
                 <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
-                  Home
+                  Careers
                 </div>
               </Link>
-              <Link href="/about">
+              <Link href="/services/development">
                 <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
-                  About
+                  Development
                 </div>
               </Link>
-              <Link href="/services">
+              <Link href="/services/technology">
                 <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
-                  Services
+                  Tech Consulting
+                </div>
+              </Link>
+              <Link href="/services/policy-consulting">
+                <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
+                  Policy Consulting
+                </div>
+              </Link>
+              <Link href="/services/business-consultancy">
+                <div className="block px-4 py-2 text-gray-600 hover:text-gray-900">
+                  Business
                 </div>
               </Link>
               <Link href="/contact">
@@ -105,12 +108,31 @@ const Header = () => {
               </Link>
             </div>
           )}
-          <Link href="/login">
-            <div className="text-gray-600 hover:text-gray-900">Login</div>
-          </Link>
-          <Link href="/signup">
-            <button className="bg-teal-400 hover:bg-teal-500 text-white px-4 py-2 mr-1 rounded-md">
-              Sign Up
+          <nav className="hidden lg:flex space-x-4">
+            <div
+              className="relative group hidden lg:block"
+              onMouseEnter={handleMouseEnter}
+              ref={dropdownRef}
+            >
+              <button className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Services
+              </button>
+              <ServicesDropdown isOpen={isServicesDropdownOpen} />
+            </div>
+            <Link href="/careers">
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Careers
+              </div>
+            </Link>
+            <Link href="/blog">
+              <div className="text-gray-600 hover:text-gray-900 font-bold text-lg transition duration-300 ease-in-out">
+                Blog
+              </div>
+            </Link>
+          </nav>
+          <Link href="/contact">
+            <button className="bg-voodoo-400 hover:bg-voodoo-500 text-white px-4 py-2 mr-1 rounded-md">
+              Contact Us
             </button>
           </Link>
         </div>
