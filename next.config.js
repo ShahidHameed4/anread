@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
     images: {
-      domains: ['i.ibb.co'],
+      domains: ['i.ibb.co','via.placeholder.com'],
     },
   }
   

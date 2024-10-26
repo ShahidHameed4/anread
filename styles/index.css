@@ -1,35 +1,153 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-.fadeIn {
-    animation: fadeIn 1s ease forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px); /* Fade in while sliding up */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-  @keyframes typewriter {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Fade In Animation */
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Fade in while sliding up */
   }
-  
-  .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typewriter 3s steps(40) infinite;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Fade Out Animation */
+.fadeOut {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* Start from current position */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px); /* Fade out while sliding up */
+  }
+}
+
+/* Fade In Up Animation */
+.fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Fade in while sliding up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down Animation */
+.fadeInDown {
+  animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Fade in while sliding down */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left Animation */
+.fadeInLeft {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-250px); /* Fade in while sliding from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right Animation */
+.fadeInRight {
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(250px); /* Fade in while sliding from right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Scale Animation */
+.fadeInScale {
+  animation: fadeInScale 1s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Fade in while scaling */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade Out Scale Animation */
+.fadeOutScale {
+  animation: fadeOutScale 1s ease forwards;
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1); /* Start from normal scale */
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5); /* Fade out while scaling down */
+  }
+}
+
+/* Typewriter Effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40) infinite;
+}

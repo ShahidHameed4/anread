@@ -15,6 +15,19 @@ module.exports = {
     extend: {
       colors: {
         // light mode
+        voodoo: {
+          50: '#F3E9EF',
+          100: '#E0C2D2',
+          200: '#CA9BB3',
+          300: '#AF7495',
+          400: '#945F7C',
+          500: '#773F63', // this is the main Voodoo color
+          600: '#643051',
+          700: '#50253F',
+          800: '#3B1A2D',
+          900: '#27111C',
+        },
+
         tremor: {
           brand: {
             faint: colors.blue[50],
@@ -172,6 +185,26 @@ module.exports = {
       50: "#FFEEEB",
     },
     extend: {
+      colors: {
+        // light mode
+        voodoo: {
+          50: '#F3E9EF',
+          100: '#E0C2D2',
+          200: '#CA9BB3',
+          300: '#AF7495',
+          400: '#945F7C',
+          500: '#773F63',
+          600: '#643051',
+          700: '#50253F',
+          800: '#3B1A2D',
+          900: '#27111C',
+        },
+      },
+
+      fontFamily: {
+        custom: ['"Plus Jakarta Sans"', 'sans-serif'], 
+      },
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

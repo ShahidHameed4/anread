@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faCode, faComments, faChartBar, faUsers, faHandsHelping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCog,
+  faCode,
+  faComments,
+  faChartBar,
+  faUsers,
+  faHandsHelping,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Define the features with their details
 const features = [
@@ -64,7 +71,10 @@ const FeaturesSection = () => {
               className="bg-white rounded-lg p-6 shadow-md flex flex-col items-center justify-center text-center transition duration-300 ease-in-out transform hover:scale-105"
             >
               <div className="mb-4">
-                <FontAwesomeIcon icon={feature.icon} className="text-teal-500 text-5xl" />
+                <FontAwesomeIcon
+                  icon={feature.icon}
+                  className="text-voodoo-500 text-5xl"
+                />
               </div>
               <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>

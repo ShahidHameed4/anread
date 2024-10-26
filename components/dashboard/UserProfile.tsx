@@ -123,7 +123,6 @@ const ProfilePage = () => {
       {isModalOpen && (
         <EditUserModal
           user={user}
-          editedUser={editedUser}
           handleEdit={handleEdit}
           handleSave={handleSave}
           closeModal={() => setIsModalOpen(false)}
