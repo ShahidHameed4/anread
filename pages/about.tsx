@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/landing/Layout";
-import "../styles/index.css";
 import Header from "../components/landing/Header";
 const AboutPage = () => {
   return (
     <Layout>
-      
-    <Header />
-      
-      <section className="py-16 bg-gray-100 pt-24"> {/* Added pt-24 for padding top */}
+      <Header />
+
+      <section className="py-16 bg-gray-100 pt-24">
+        {" "}
+        {/* Added pt-24 for padding top */}
         <div className="container mx-auto mt-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-teal-600 mb-6 font-pacifico">

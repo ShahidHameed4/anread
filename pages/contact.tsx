@@ -65,7 +65,7 @@ const ContactPage = () => {
                   <textarea
                     id="message"
                     name="message"
-                    rows="4"
+                    rows={4}
                     className="w-full py-2 px-3 rounded-md border border-gray-300 focus:outline-none focus:border-voodoo-500"
                     placeholder="Type your message here"
                     required

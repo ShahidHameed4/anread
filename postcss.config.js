@@ -3,7 +3,4 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
-  images: {
-    domains: ['i.ibb.co'],
-  },
-}
+};
