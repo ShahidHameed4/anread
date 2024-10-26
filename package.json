@@ -13,11 +13,14 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@stripe/react-stripe-js": "^2.6.2",
     "@stripe/stripe-js": "^3.0.10",
-    "framer-motion": "^11.0.14",
+    "framer-motion": "^11.11.8",
     "next": "latest",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-scroll-motion": "^0.3.3",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
